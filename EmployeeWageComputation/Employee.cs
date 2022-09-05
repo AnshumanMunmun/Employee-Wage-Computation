@@ -10,7 +10,7 @@ namespace EmployeeWageComputation
     {
         const int IS_FULLTIME = 1, IS_PARTTIME = 2, EMP_RATE_PER_HOUR = 20, WORKING_DAY = 20, MONTHLY_HRS = 100;
         int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-        public void ComputingWage()
+        public void ComputingWage(string Company, int EMP_RATE_PER_HOUR, int WORKING_DAY, int MONTHLY_HRS)
         {
             while (totalEmpHrs <= MONTHLY_HRS && totalWorkingDays < WORKING_DAY )
             {
@@ -36,7 +36,7 @@ namespace EmployeeWageComputation
                 Console.WriteLine("Day:" + totalWorkingDays + " Employee Working Hrs:" + empHrs);
             }
             int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Total Employee Wage:" + totalEmpWage);
+            Console.WriteLine("Total Salary of Employee per Month in Company {0} wage is {1} ", Company, totalEmpWage);
         }
     }
 }
