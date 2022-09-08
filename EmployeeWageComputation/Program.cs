@@ -4,10 +4,15 @@
     {
         static void Main(string[] args)
         {
-            EmployeeWage employeeWage = new EmployeeWage();
-            employeeWage.ComputingWage("Dell", 20, 20, 100);
-            employeeWage.ComputingWage("HTC", 19, 25, 70);
-            employeeWage.ComputingWage("HP", 18, 24, 80);
+            EmployeeWage Dell = new EmployeeWage("Dell", 20, 2, 10);
+            Dell.ComputingWage();
+            Console.WriteLine(Dell.ToString());
+            EmployeeWage HTC = new EmployeeWage("HTC", 10, 4, 20);
+            HTC.ComputingWage();
+            Console.WriteLine(HTC.ToString());
+            EmployeeWage HP = new EmployeeWage("HP", 18, 24, 80);
+            HP.ComputingWage();
+            Console.WriteLine(HP.ToString());
         }
     }
 }
